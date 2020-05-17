@@ -4,4 +4,4 @@ Use shortcode [covid19 show=n]
 
 This shortcode use bootstape css 
 
-Live demo http://sandeepjain.org/covid19-statistics/
+Live demo http://sandeepjain.me/covid19-statistics/
