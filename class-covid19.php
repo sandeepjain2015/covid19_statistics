@@ -3,13 +3,16 @@
  * Plugin Name: Covid 19 Statics. 
  * Description: short code for Covid 19.
  * Author: Sandeep jain
- * Author URI:http://sandeepjain.me
- * Plugin URI:http://sandeepjain.me
+ * Author URI:http://sandeepjain.me/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash
+ * Plugin URI:http://sandeepjain.me/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
  * Version:1.0
- * License: GPL
+ * License: GPL2
  * 
  * @package   covid 19
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 class Covid19 {
 	protected $pluginpath;
 	protected $cachetime;
