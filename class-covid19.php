@@ -24,7 +24,6 @@ class Covid19 {
 		$this->cachetime  = 20 * MINUTE_IN_SECONDS;
 		add_shortcode( 'covid19', array( $this, 'covid19_shortcode' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'covid_scripts' ) ); 
-		add_filter( 'widget_text', array( $this, 'covid19_shortcode' ) );
 	}
 	/**
 	 * Covid 19 shortcode.
