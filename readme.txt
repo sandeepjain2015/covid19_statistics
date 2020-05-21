@@ -29,7 +29,7 @@ If the installation does not succeed, please contact us at mr.sandeepmcscet@gmai
 Use Shortcode [covid19 number=n] where n is number like [covid19 number=10]
 <h3>Third Party API & License Information</h3>
 * **API website:-** https://github.com/NovelCOVID/API
-* **API docs:-** https://corona.lmao.ninja/docs/]
+* **API docs:-** https://corona.lmao.ninja/docs/
 * **License:-** https://github.com/NovelCOVID/API/blob/master/LICENSE
 * **Privacy policy:-** https://github.com/NovelCOVID/API/blob/master/privacy.md
 
