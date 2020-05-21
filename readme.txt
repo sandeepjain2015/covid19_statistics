@@ -5,7 +5,7 @@ Requires at least: 5.0
 Tested up to: 5.4.1
 Requires PHP: 5.6
 License: GPL2
-License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 Covid 19 Statics Plugin is used to display Novel Coronavirus (COVID-19) outbreak live Updates in WordPress page/posts/widgets section.
@@ -26,24 +26,22 @@ Click “Choose file” (“Browse”) and select the downloaded zip file of the
 Click “Install Now” button.
 Click “Activate Plugin” button for activating Covid 19 Statics.
 If the installation does not succeed, please contact us at mr.sandeepmcscet@gmail.com.
-Use Shortcode [covid19 show=n] where n is number like [covid19 show=10]
+Use Shortcode [covid19 number=n] where n is number like [covid19 number=10]
 <h3>Third Party API & License Information</h3>
-* **API website:-** https://rapidapi.com/api-sports/api/covid-193
-* **API docs:-** https://api-sports.io/documentation/covid-19
-* **License:-** https://rapidapi.com/blog/directory/licensing/
-* **Privacy policy:-** https://rapidapi.com/terms
+* **API website:-** https://github.com/NovelCOVID/API
+* **API docs:-** https://corona.lmao.ninja/docs/]
+* **License:-** https://github.com/NovelCOVID/API/blob/master/LICENSE
+* **Privacy policy:-** https://github.com/NovelCOVID/API/blob/master/privacy.md
 
 Please read privacy policy & license terms of this API carefully before using this plugin inside your website.
 
 As this plugin functionality and data totally depends on third party apis. (We can’t provide any support if there is any downtime in third party apis).
 
 == Frequently Asked Questions ==
-= Which API are you using? =
-We are using (https://covid-193.p.rapidapi.com/statistics) API inside this plugin.
-
-API license :- https://rapidapi.com/blog/directory/licensing/
-API privacy policy :- https://rapidapi.com/terms
-API docs :- https://api-sports.io/documentation/covid-19
+= Which shortcode for tabular data =
+[covid19 number=n] where n is number like [covid19 number=10]
+= Which shortcode for marquee data =
+[covid19_marquee number=n direciton=x] where n is number and x is direction like [covid19 number=10 direction=right]
 == Screenshots ==
 1. Show covid 19 short code
 1. Use shortcode 

@@ -15,3 +15,4 @@ table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
 bottom: .5em;
 }
+.covid_19_marquee h2{color: black;}
