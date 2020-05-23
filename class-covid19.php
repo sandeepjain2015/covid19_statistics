@@ -212,7 +212,7 @@ class Covid19 {
 			'datatables_css',
 			$this->pluginpath . 'css/min/datatables.min.css',
 			'',
-			'02052020.12',
+			'02052020.13',
 			''
 		);
 		wp_register_style(
