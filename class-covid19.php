@@ -3,7 +3,7 @@
  * Plugin Name: Covid 19 Statics. 
  * Description: Statics for Covid 19.
  * Author: Sandeep jain
- * Author URI:http://sandeepjain.me/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash
+ * Author URI:http://sandeepjain.me/
  * Plugin URI:http://sandeepjain.me/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
  * Version:1.0
  * License: GPL2
@@ -14,7 +14,12 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-class Covid19 {
+interface covid19_features{
+	public function get_covid19_data();
+	public function covid19_shortcode( $atts );
+	public function covid19_marquee_shortcode( $atts );
+}
+class Covid19 implements covid19_features {
 	/**
 	 * Plugin path.
 	 *
@@ -40,7 +45,7 @@ class Covid19 {
 	/**
 	 * Get covid19 data.
 	 */
-	protected function get_covid19_data() {
+	public function get_covid19_data() {
 		$cache_name  = 'covid_key';
 		$cache_group = 'covid_group';
 		// get cache here.
@@ -80,12 +85,12 @@ class Covid19 {
 		<table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
 		<thead>
 		<tr>
-		<th class="th-sm">Country</th>
-		<th class="th-sm">Active</th>
-		<th class="th-sm">Critical</th>
-		<th class="th-sm">Recovered</th>
-		<th class="th-sm">Deaths</th>
-		<th class="th-sm">Total</th>
+		<th class="th-sm"><?php esc_html_e( 'Country', 'covid_statics' ); ?></th>
+		<th class="th-sm"><?php esc_html_e( 'Active', 'covid_statics' ); ?></th>
+		<th class="th-sm"><?php esc_html_e( 'Critical', 'covid_statics' ); ?></th>
+		<th class="th-sm"><?php esc_html_e( 'Recovered', 'covid_statics' ); ?></th>
+		<th class="th-sm"><?php esc_html_e( 'Deaths', 'covid_statics' ); ?> </th>
+		<th class="th-sm"><?php esc_html_e( 'Total', 'covid_statics' ); ?>  </th>
 		</tr>
 		</thead>
 		<tbody>
@@ -120,7 +125,7 @@ class Covid19 {
 			?>
 		</tbody></table>
 		<?php } else { ?>
-		<div>Something wrong With API</div> 
+		<div><?php esc_html_e( 'Something wrong With API', 'covid_statics' ); ?></div> 
 			<?php
 		}
 		return ob_get_clean();
@@ -161,12 +166,12 @@ class Covid19 {
 				$total_deaths    = property_exists( $covid_stats, 'deaths' ) ? $covid_stats->deaths : '';
 				?>
 			<div class ="single-item">
-			<h2 class="h2-sm">Country</h2><?php echo esc_html( $country_name ); ?>
-			<h2 class="h2-sm">Active</h2><?php echo esc_html( $active_cases ); ?>
-			<h2 class="h2-sm">Critical</h2><?php echo esc_html( $critical_cases ); ?>
-			<h2 class="h2-sm">Recovered</h2><?php echo esc_html( $recovered_cases ); ?>
-			<h2 class="h2-sm">Deaths</h2><?php echo esc_html( $total_deaths ); ?>
-			<h2 class="h2-sm">Total</h2><?php echo esc_html( $total_cases ); ?>
+			<h2 class="h2-sm"><?php esc_html_e( 'Country', 'covid_statics' ); ?></h2><?php esc_html_e( $country_name ); ?>
+			<h2 class="h2-sm"><?php esc_html_e( 'Active', 'covid_statics' ); ?></h2><?php esc_html_e( $active_cases ); ?>
+			<h2 class="h2-sm"><?php esc_html_e( 'Critical', 'covid_statics' );?></h2><?php esc_html_e( $critical_cases ); ?>
+			<h2 class="h2-sm"><?php esc_html_e( 'Recovered', 'covid_statics' ); ?></h2><?php esc_html_e( $recovered_cases ); ?>
+			<h2 class="h2-sm"><?php esc_html_e( 'Deaths', 'covid_statics' ); ?></h2><?php esc_html_e( $total_deaths ); ?>
+			<h2 class="h2-sm"><?php esc_html_e( 'Total', 'covid_statics' ); ?></h2><?php esc_html_e( $total_cases ); ?>
 			</div>
 				<?php
 				if ( intval( $number_entry ) === $count ) {
@@ -177,7 +182,7 @@ class Covid19 {
 			?>
 		</marquee>
 		<?php } else { ?>
-		<div>Something wrong With API</div> 
+		<div><?php esc_html_e( 'Something wrong With API', 'covid_statics' ); ?></div> 
 			<?php
 		}
 		return ob_get_clean();
