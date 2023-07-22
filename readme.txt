@@ -2,7 +2,7 @@
 Contributors: sandeepjainlive
 Tags: covid19
 Requires at least: 5.0
-Tested up to: 5.4.1
+Tested up to:6.2
 Requires PHP: 5.6
 License: GPL2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -41,10 +41,13 @@ As this plugin functionality and data totally depends on third party apis. (We c
 = Which shortcode for tabular data =
 [covid19 number=n] where n is number like [covid19 number=10]
 = Which shortcode for marquee data =
-[covid19_marquee number=n direciton=x] where n is number and x is direction like [covid19 number=10 direction=right]
+[covid19_marquee number=n direciton=x] where n is number and x is direction like [covid19_marquee number=10 direction=right]
 == Screenshots ==
 1. Show covid 19 short code
 1. Use shortcode 
 
 == Changelog ==
+1.1
+Update marque shortcode in readme file
+Tested for version 5.7
 1.0
